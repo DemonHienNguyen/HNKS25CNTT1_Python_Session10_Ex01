@@ -146,7 +146,17 @@ while True:
                 print("Đã thêm sản phẩm thành công !")
             else:
                 print(f"Sản phẩm mã {product_code} đã tồn tại !")
-                cart_items[index][2] += 1
+                while True:
+                    try:
+                        product_quantity = int(input("Vui lòng nhập số lượng của sản phẩm: "))
+                    except:
+                        print("Số lượng sản phẩm không hợp lệ !")
+                        continue 
+                    if(product_quantity < 0 ):
+                        print("Số lượng sản phẩm không được dưới 0")
+                        continue 
+                    break 
+                cart_items[index][2] += product_quantity
                 print("Đã thêm số lượng thành công !")
             
             print()
