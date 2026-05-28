@@ -111,7 +111,7 @@ while True:
                 if(item[0] == product_code):
                     found = True
                     up_index = index
-                break
+                    break
             if not found:
                 print("=== THÊM SẢN PHẨM MỚI ===")
                 while True:
